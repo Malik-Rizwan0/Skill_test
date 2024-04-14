@@ -1,0 +1,33 @@
+.ui-datepicker{
+    right: 800px !important;
+    top: 90px !important;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.ui-datepicker-header{
+    border: none;
+    background-color: transparent;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: none;
+    background: transparent;
+    font-weight: normal;
+    color: #454545;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ui-state-default:hover{
+    font-weight: 400;
+    border-radius: 50px !important;
+    border:  1px solid rgb(92, 92, 176);
+}
+td:hover{
+    color: rgb(92, 92, 176) !important;
+}
+.ui-datepicker-year{
+    display: none;
+}

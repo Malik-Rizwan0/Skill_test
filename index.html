@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search Widgets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="calender.css">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container-fluid">
+
+        <div class="search-widget search-widget1 ">
+            <label for="from-city">From</label>
+            <input type="text" id="from-city" name="from-city" placeholder="Country,city or airport" list="from-cities">
+            <datalist id="from-cities"></datalist>
+
+        </div>
+        <button class="swap-btn" onclick="swapValues()"><i class="fa-solid fa-right-left"></i></button>
+        <div class="col-3 search-widget search-widget2">
+            <label for="to-city">To</label>
+            <input type="text" id="to-city" name="to-city" placeholder="Country,city or airport" list="to-cities">
+            <datalist id="to-cities">
+            </datalist>
+        </div>
+        <div class="part">
+            <div class="search-widget depart">
+                <label for="to-city">Depart</label>
+                <input type="text" id="depart" placeholder="Add date">
+            </div>
+            <div class="search-widget depart-mobile">
+                <label for="to-city">Depart</label>
+                <input type="text" id="depart-mobile" placeholder="Add date">
+            </div>
+            <div class="col-2 search-widget return">
+                <label for="to-city">Return</label>
+                <input type="text" id="return"  placeholder="Add date">
+            </div>
+            <div class="col-3 search-widget cabin cabin-input">
+                <label for="cabin">Travellers and cabin class</label>
+                <input type="text" id="cabin" placeholder="1 Adult, Economy">
+            </div>
+        </div>
+
+
+        <button id="search-button">Search</button>
+
+    </section>
+    <div class="content">
+        <h4>Cabin class :-</h4>
+        <div class="passenger-selection">
+            <select name="cabin-class" id="class">
+                <option value="Business" id="business_class">Business</option>
+                <option value="Economy" id="economy_class">Economy</option>
+            </select>
+            <div class="child">
+                <p>
+                    Children
+                    <br>
+                    <span>Aged 0 to 15</span>
+                </p>
+                <div class="passenger-count">
+                    <button id="child-dec">-</button>
+                    <span id="child-count">0</span>
+                    <button id="child-inc">+</button>
+                </div>
+            </div>
+            <div class="adult">
+                <p>
+                    Adult
+                    <br>
+                    <span>Aged 15+</span>
+                </p>
+                <div class="passenger-count">
+                    <button id="adult-dec">-</button>
+                    <span id="adult-count">0</span>
+                    <button id="adult-inc">+</button>
+                </div>
+            </div>
+        </div>
+        <p><span>Your age at time of travel must be valid for the age category booked. Airlines have restriction on under 18s travelling alone.</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
